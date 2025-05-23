@@ -1,0 +1,24 @@
+
++------------------+           +--------------------+           +------------------+
+|     Student     |           |        Course      |           |    Instructor    |
++------------------+           +--------------------+           +------------------+
+| id               |<--------->| id                 |<--------->| id               |
+| name             |           | name               |           | name             |
+|                  |           | instructor_id      |           |                  |
+| enrollments (List) |         | enrollments (List) |           | courses (List)   |
++------------------+           +--------------------+           +------------------+
+       |                               |                               |
+       |  One-to-Many                  |  One-to-Many                 |  One-to-Many
+       |                               |                               |
+       v                               v                               v
++--------------------+       +--------------------+         +--------------------+
+|    Enrollment      |       | Instructor_Course  |         | Course_Instructor  |
+|--------------------|       |--------------------|         |--------------------|
+| id                 |       | instructor_id      |         | course_id          |
+| student_id         |       | course_id          |         | instructor_id      |
+| course_id          |       +--------------------+         +--------------------+
+| enrollment_date    |
++--------------------+
+
+
+
